@@ -8,5 +8,5 @@ resources:
   # Flux-Kustomizations
   - ./plex/ks.yaml
   # - ./jellyfin/ks.yaml
-  # - ./overseerr/ks.yaml
+  - ./overseerr/ks.yaml
   - ./immich/ks.yaml
