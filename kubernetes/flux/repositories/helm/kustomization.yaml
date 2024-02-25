@@ -11,6 +11,7 @@ resources:
   - ./kubernetes-dashboard.yaml
   - ./jetstack.yaml
   - ./metrics-server.yaml
+  - ./nfs-subdir-external-provisioner-charts.yaml
   - ./openebs.yaml
   - ./postfinance.yaml
   - ./stakater.yaml
