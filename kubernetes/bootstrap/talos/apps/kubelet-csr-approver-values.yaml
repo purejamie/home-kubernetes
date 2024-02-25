@@ -1,0 +1,3 @@
+---
+providerRegex: ^(bakerkubes1|bakerkubes2|bakerkubes3)$
+bypassDnsResolution: true
