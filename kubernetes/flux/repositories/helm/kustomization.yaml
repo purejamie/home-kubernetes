@@ -8,6 +8,7 @@ resources:
   - ./external-secrets.yaml
   - ./ingress-nginx.yaml
   - ./k8s-gateway.yaml
+  - ./kubernetes-dashboard.yaml
   - ./jetstack.yaml
   - ./metrics-server.yaml
   - ./openebs.yaml
