@@ -116,17 +116,17 @@ spec:
         enabled: true
         className: external
         annotations:
-          external-dns.alpha.kubernetes.io/target: external.bakernet.casa
+          external-dns.alpha.kubernetes.io/target: external.${SECRET_DOMAIN}
           hajimari.io/enable: "true"
           hajimari.io/icon: mdi:home-assistant
         hosts:
-          - host: &host "{{ .Release.Name }}.bakernet.casa"
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
                   name: main
                   port: http
-          - host: &customHost hass.bakernet.casa
+          - host: &customHost hass.${SECRET_DOMAIN}
             paths:
               - path: /
                 service:
