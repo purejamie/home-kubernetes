@@ -102,7 +102,7 @@ spec:
           hajimari.io/group: "Downloads"
           hajimari.io/icon: mdi:movie-search
         hosts:
-          - host: &host "{{ .Release.Name }}.bakernet.casa"
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
