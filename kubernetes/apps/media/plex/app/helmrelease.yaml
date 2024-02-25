@@ -23,9 +23,9 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  dependsOn:
-    - name: intel-device-plugin-gpu
-      namespace: tools
+  # dependsOn:
+  #   - name: intel-device-plugin-gpu
+  #     namespace: tools
   values:
     controllers:
       main:
@@ -62,12 +62,12 @@ spec:
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
               capabilities: { drop: ["ALL"] }
-            resources:
-              requests:
-                gpu.intel.com/i915: 1
-              limits:
-                gpu.intel.com/i915: 1
-                memory: 12Gi
+            # resources:
+            #   requests:
+            #     gpu.intel.com/i915: 1
+            #   limits:
+            #     gpu.intel.com/i915: 1
+            #     memory: 12Gi
         pod:
           nodeSelector:
             intel.feature.node.kubernetes.io/gpu: "true"
