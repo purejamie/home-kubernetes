@@ -39,7 +39,7 @@ spec:
         maxParallel: 8
       destinationPath: s3://databases/
       endpointURL: http://minio.database.svc.cluster.local:9000
-      serverName: &currentCluster homecluster-v3
+      serverName: &currentCluster homecluster-v4
       s3Credentials:
         accessKeyId:
           name: cloudnative-pg-secret
@@ -48,14 +48,14 @@ spec:
           name: cloudnative-pg-secret
           key: aws-secret-access-key
 
-  # # Note: previousCluster needs to be set to the name of the previous
-  # # cluster when recovering from an existing cnpg cluster
-  # bootstrap:
-  #   recovery:
-  #     source: &previousCluster homecluster-v2
-  # # Note: externalClusters is needed when recovering from an existing cnpg cluster
-  # externalClusters:
-  #   - name: *previousCluster
-  #     barmanObjectStore:
-  #       <<: *barmanObjectStore
-  #       serverName: *previousCluster
+  # Note: previousCluster needs to be set to the name of the previous
+  # cluster when recovering from an existing cnpg cluster
+  bootstrap:
+    recovery:
+      source: &previousCluster homecluster-v3
+  # Note: externalClusters is needed when recovering from an existing cnpg cluster
+  externalClusters:
+    - name: *previousCluster
+      barmanObjectStore:
+        <<: *barmanObjectStore
+        serverName: *previousCluster
