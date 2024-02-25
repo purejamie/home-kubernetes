@@ -5,6 +5,7 @@ resources:
   - ./namespace.yaml
   - ./cilium/ks.yaml
   - ./kubelet-csr-approver/ks.yaml
+  - ./local-path-provisioner/ks.yaml
   - ./metrics-server/ks.yaml
   - ./nfs-subdir-external/ks.yaml
   - ./spegel/ks.yaml
