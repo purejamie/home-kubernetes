@@ -70,11 +70,8 @@ spec:
       main:
         enabled: true
         className: internal
-        annotations:
-          hajimari.io/enable: "true"
-          hajimari.io/group: "Home"
         hosts:
-          - host:  &host "{{ .Release.Name }}.bakernet.casa"
+          - host:  &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
