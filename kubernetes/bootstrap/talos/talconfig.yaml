@@ -22,7 +22,7 @@ nodes:
   - hostname: "bakerkubes1"
     ipAddress: "10.0.1.1"
     installDisk: "/dev/sda"
-    talosImageURL: factory.talos.dev/installer/fec0f0b58d58df2638265b64c1cab6b43550503ea8642dd2fdcd6d70c2ec37c7
+    talosImageURL: factory.talos.dev/installer/97bf8e92fc6bba0f03928b859c08295d7615737b29db06a97be51dc63004e403
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -38,7 +38,7 @@ nodes:
   - hostname: "bakerkubes2"
     ipAddress: "10.0.1.2"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/fec0f0b58d58df2638265b64c1cab6b43550503ea8642dd2fdcd6d70c2ec37c7
+    talosImageURL: factory.talos.dev/installer/97bf8e92fc6bba0f03928b859c08295d7615737b29db06a97be51dc63004e403
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -54,7 +54,7 @@ nodes:
   - hostname: "bakerkubes3"
     ipAddress: "10.0.1.3"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/fec0f0b58d58df2638265b64c1cab6b43550503ea8642dd2fdcd6d70c2ec37c7
+    talosImageURL: factory.talos.dev/installer/97bf8e92fc6bba0f03928b859c08295d7615737b29db06a97be51dc63004e403
     controlPlane: true
     networkInterfaces:
       - interface: eth0
