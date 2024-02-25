@@ -8,11 +8,13 @@ resources:
   - ./external-dns.yaml
   - ./external-secrets.yaml
   - ./ingress-nginx.yaml
+  - ./intel.yaml
   - ./k8s-gateway.yaml
   - ./kubernetes-dashboard.yaml
   - ./jetstack.yaml
   - ./metrics-server.yaml
   - ./nfs-subdir-external-provisioner-charts.yaml
+  - ./node-feature-discovery.yaml
   - ./openebs.yaml
   - ./postfinance.yaml
   - ./stakater.yaml
