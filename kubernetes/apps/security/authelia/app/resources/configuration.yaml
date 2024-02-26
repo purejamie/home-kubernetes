@@ -5,7 +5,7 @@ authentication_backend:
     disable: true
   refresh_interval: 1m
   ldap:
-    address: ldap://lldap.networking.svc.cluster.local:389
+    address: ldap://lldap.security.svc.cluster.local:389
     implementation: custom
     timeout: 5s
     start_tls: false
@@ -75,15 +75,15 @@ identity_providers:
       allowed_origins_from_client_redirect_uris: true
 
     clients:
-      - id: immich
-        description: Immich
-        secret: $${IMMICH_OAUTH_CLIENT_SECRET}
-        public: false
-        authorization_policy: two_factor
-        pre_configured_consent_duration: 1y
-        scopes: ["openid", "profile", "email"]
-        redirect_uris: ["https://photos.${SECRET_DOMAIN}/auth/login", "app.immich:/"]
-        userinfo_signed_response_alg: none
+      # - id: immich
+      #   description: Immich
+      #   secret: $${IMMICH_OAUTH_CLIENT_SECRET}
+      #   public: false
+      #   authorization_policy: two_factor
+      #   pre_configured_consent_duration: 1y
+      #   scopes: ["openid", "profile", "email"]
+      #   redirect_uris: ["https://photos.${SECRET_DOMAIN}/auth/login", "app.immich:/"]
+      #   userinfo_signed_response_alg: none
     #   - id: grafana
     #     description: Grafana
     #     secret: "$${GRAFANA_OAUTH_CLIENT_SECRET}"

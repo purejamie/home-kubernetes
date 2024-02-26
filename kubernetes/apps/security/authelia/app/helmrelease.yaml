@@ -25,7 +25,7 @@ spec:
     keepHistory: false
   dependsOn:
     - name: lldap
-      namespace: networking
+      namespace: security
     - name: redis
       namespace: database
   values:
