@@ -58,7 +58,7 @@ duo_api:
   disable: true
 
 access_control:
-  default_policy: two_factor
+  default_policy: deny
   networks:
     - name: internal
       networks: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
@@ -67,6 +67,11 @@ access_control:
       networks:
         - internal
       policy: bypass
+    - domain: "photos.${SECRET_DOMAIN_NAME}"
+      policy: two_factor
+      subject:
+        - "group:baker-admins"
+        - "group:baker-users"
 
 identity_providers:
   oidc:
