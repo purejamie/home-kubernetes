@@ -6,12 +6,12 @@ metadata:
   namespace: database
 labels:
   app.kubernetes.io/name: redis
-  app.kubernetes.io/instance: {{ .Release.Name }}
+  app.kubernetes.io/instance: redis
   app.kubernetes.io/managed-by: Helm
 annotations:
-  meta.helm.sh/release-name: {{ .Release.Name }}
-  meta.helm.sh/release-namespace: {{ .Release.Namespace }}
-  
+  meta.helm.sh/release-name: redis
+  meta.helm.sh/release-namespace: database
+
 ---
 # yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/helm.toolkit.fluxcd.io/helmrelease_v2beta2.json
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
