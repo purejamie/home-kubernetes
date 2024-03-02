@@ -75,6 +75,19 @@ access_control:
 
 default_redirection_url: "https://auth.bakernet.casa"
 
+regulation:
+  ## The number of failed login attempts before user is banned. Set it to 0 to disable regulation.
+  max_retries: 3
+
+  ## The time range during which the user can attempt login before being banned. The user is banned if the
+  ## authentication failed 'max_retries' times in a 'find_time' seconds window. Find Time accepts duration notation.
+  ## See: https://www.authelia.com/configuration/prologue/common/#duration-notation-format
+  find_time: 2m
+
+  ## The length of time before a banned user can login again. Ban Time accepts duration notation.
+  ## See: https://www.authelia.com/configuration/prologue/common/#duration-notation-format
+  ban_time: 5m
+
 identity_providers:
   oidc:
     cors:
@@ -83,11 +96,11 @@ identity_providers:
 
     clients:
       - id: immich
-        description: Immich
+        description: "Bakernet Photo Archive"
         secret: "$${IMMICH_OAUTH_CLIENT_SECRET}"
         public: false
         authorization_policy: two_factor
-        pre_configured_consent_duration: 1y
+        pre_configured_consent_duration: 30d
         scopes: ["openid", "profile", "email"]
         redirect_uris: ["https://photos.${SECRET_DOMAIN}/auth/login", "app.immich:/"]
         userinfo_signed_response_alg: none
