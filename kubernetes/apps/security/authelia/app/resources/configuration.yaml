@@ -73,6 +73,8 @@ access_control:
         - "group:baker-admins"
         - "group:baker-users"
 
+default_redirection_url: "https://auth.bakernet.casa"
+
 identity_providers:
   oidc:
     cors:
