@@ -51,8 +51,8 @@ spec:
               SONARR__AUTHENTICATION_REQUIRED: DisabledForLocalAddresses
               SONARR__INSTANCE_NAME: Sonarr
               SONARR__PORT: &port 80
-              SONARR__LOG_LEVEL: trace
-              SONARR__THEME: dark
+              SONARR__LOG_LEVEL: debug
+              SONARR__THEME: light
               TZ: Europe/London
             envFrom: *envFrom
             probes:
@@ -80,14 +80,14 @@ spec:
                 memory: 256M
               limits:
                 memory: 1Gi
-        # pod:
-        #   securityContext:
-        #     runAsUser: 568
-        #     runAsGroup: 568
-        #     runAsNonRoot: true
-        #     fsGroup: 568
-        #     fsGroupChangePolicy: OnRootMismatch
-        #     supplementalGroups: [10000]
+        pod:
+          securityContext:
+            runAsUser: 568
+            runAsGroup: 568
+            runAsNonRoot: true
+            fsGroup: 568
+            fsGroupChangePolicy: OnRootMismatch
+            supplementalGroups: [10000]
     service:
       main:
         ports:
