@@ -5,5 +5,5 @@ kind: Kustomization
 resources:
   - ./homecluster.yaml
   - ./scheduledbackup.yaml
-  - ./prometheusrule.yaml
+  # - ./prometheusrule.yaml
   - ./service.yaml
