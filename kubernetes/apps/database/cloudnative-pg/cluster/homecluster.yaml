@@ -6,7 +6,7 @@ metadata:
   name: homecluster
 spec:
   instances: 3
-  imageName: ghcr.io/tensorchord/cloudnative-pgvecto.rs:16.2-v0.2.0
+  imageName: ghcr.io/bo0tzz/cnpgvecto.rs:16.1-v0.1.11
   primaryUpdateStrategy: unsupervised
   storage:
     size: 40Gi
@@ -47,8 +47,6 @@ spec:
         secretAccessKey:
           name: cloudnative-pg-secret
           key: aws-secret-access-key
-
----
 
   # # Note: previousCluster needs to be set to the name of the previous
   # # cluster when recovering from an existing cnpg cluster
