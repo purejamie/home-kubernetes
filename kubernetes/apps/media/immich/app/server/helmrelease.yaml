@@ -90,7 +90,7 @@ spec:
           hajimari.io/group: "Media"
           hajimari.io/icon: mdi:television-classic
         hosts:
-          - host: &host photos.${SECRET_DOMAIN}
+          - host: &host "photos.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
